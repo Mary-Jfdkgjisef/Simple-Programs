@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <limits.h>
 
-#define MAXSIZE 10
+#define MAXSIZE INT_MAX
 #define NotFound 0
 typedef int ElementType;
 
@@ -18,16 +19,20 @@ Position BinarySearch(List L, ElementType X);
 
 int main() {
     List L;
-    ElementType X = 12;
+    ElementType X = INT_MAX - 10;
     Position P;
 
     L = malloc(sizeof(struct LNode));
-    L->Last = 5;
-    L->Data[0] = 12;
-    L->Data[1] = 31;
-    L->Data[2] = 55;
-    L->Data[3] = 89;
-    L->Data[4] = 102;
+    /* L->Last = 5; */
+    /* L->Data[0] = 12; */
+    /* L->Data[1] = 31; */
+    /* L->Data[2] = 55; */
+    /* L->Data[3] = 89; */
+    /* L->Data[4] = 102; */
+    L->Last = INT_MAX;
+    for (int i = 0; i < INT_MAX; i++) {
+        L->Data[i] = i;
+    }
     for (int i = 0; i < L->Last; i++) {
         printf("%d ", L->Data[i]);
     }
