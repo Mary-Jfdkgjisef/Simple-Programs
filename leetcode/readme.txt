@@ -1,1 +1,1 @@
-Compile the C++ programs with "make" and run with "./test"
+Compile the C++ files with "make" and run with "./test"
